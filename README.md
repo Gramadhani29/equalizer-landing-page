@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Equalizer Landing Page
+
+Landing page untuk aplikasi **Equalizer**, dibangun sebagai implementasi responsive berdasarkan desain yang telah disediakan sebelumnya.
+
+Project ini dibuat menggunakan **Next.js, React, TypeScript, dan Tailwind CSS**, dengan fokus pada akurasi tampilan, responsive design, dan implementasi layout untuk desktop, tablet, dan mobile.
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- ESLint
 
 ## Getting Started
 
-First, run the development server:
+Pastikan **Node.js** sudah terpasang pada perangkat.
+
+Clone repository:
+
+```bash
+git clone <repository-url>
+cd <project-folder>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Jalankan development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Kemudian buka:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+di browser.
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Menjalankan development server.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Membuat production build.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Menjalankan aplikasi dari production build.
+
+```bash
+npm run lint
+```
+
+Menjalankan ESLint untuk memeriksa kualitas kode.
+
+## Responsive Design
+
+Landing page diimplementasikan agar dapat menyesuaikan tampilan pada berbagai ukuran layar, meliputi:
+
+- Desktop
+- Tablet
+- Mobile
+
+Responsive layout dibuat menggunakan utility responsive dari Tailwind CSS serta kombinasi Flexbox, Grid, dan positioning untuk menyesuaikan komposisi desain pada setiap ukuran layar.
+
+## Assets
+
+Seluruh visual asset yang digunakan pada halaman disimpan di dalam:
+
+```text
+/public/assets/
+```
+
+Asset digunakan secara lokal tanpa mengambil atau menggantinya dengan asset eksternal.
+
+## Font
+
+Project menggunakan **IBM Plex Sans** sebagai font utama.
+
+Font dimuat dan dioptimalkan menggunakan `next/font` pada Next.js.
+
+## Challenges & Solutions
+
+### Responsive Layout
+
+Salah satu tantangan dalam implementasi adalah menyesuaikan posisi ilustrasi aplikasi, background pattern, dan premium card karena susunan elemen berubah antara desktop, tablet, dan mobile.
+
+Hal ini ditangani dengan menggunakan responsive utilities dari Tailwind CSS serta kombinasi Flexbox, Grid, relative positioning, dan absolute positioning pada elemen yang membutuhkan overlapping.
+
+### Asset Positioning
+
+Beberapa decorative asset memiliki posisi yang berbeda pada setiap ukuran layar.
+
+Untuk menjaga layout tetap responsive, positioning dan ukuran asset disesuaikan berdasarkan breakpoint sehingga elemen tetap mengikuti komposisi desain tanpa menyebabkan horizontal overflow.
+
+### Next.js Image Handling
+
+Asset gambar diintegrasikan ke dalam struktur project melalui direktori `public/assets` dan digunakan pada komponen Next.js dengan tetap mempertahankan aspect ratio agar gambar tidak mengalami distorsi pada ukuran layar yang berbeda.
+
+## Production Build
+
+Untuk memastikan project dapat dijalankan pada production environment:
+
+```bash
+npm run build
+```
+
+Setelah proses build berhasil, production server dapat dijalankan dengan:
+
+```bash
+npm run start
+```
+
+## Deployment
+
+Project dapat di-deploy menggunakan **Vercel**.
+
+Setelah repository terhubung dengan Vercel, aplikasi dapat dibuild dan dideploy secara otomatis dari repository.
+
+## Author
+
+**Gilang Ramadhani Alifianto**
